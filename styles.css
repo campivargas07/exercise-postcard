@@ -1,0 +1,111 @@
+/* Reseteo básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1a1a1a;
+    font-family: 'Handlee', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* El gran Div amarillo */
+.postcard {
+    background-color: white;
+    width: 650px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- FILA 1: Header --- */
+.postcard-header {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.header-left {
+    flex: 1.2; /* Mantiene la proporción de las columnas */
+    display: flex;
+    align-items: center; /* Centra el H1 verticalmente si es necesario */
+}
+
+.header-left h1 {
+    font-size: 38px;
+    color: #111;
+}
+
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Alinea el logo a la derecha */
+}
+
+.header-right img {
+    width: 80px;
+}
+
+/* --- FILA 2: Body --- */
+.postcard-body {
+    display: flex;
+    gap: 30px;
+}
+
+.body-left {
+    flex: 1.2;
+}
+
+.body-left p {
+    font-size: 19px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.body-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Estilizando los <input> para que parezcan líneas en papel */
+.body-right input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    font-family: 'Handlee', cursive; /* Heredan la fuente manuscrita */
+    font-size: 18px;
+    padding: 5px 0;
+    margin-bottom: 20px;
+    background: transparent;
+    color: #333;
+    outline: none; /* Quita el borde azul al hacer clic */
+}
+
+.body-right input::placeholder {
+    color: #888;
+}
+
+/* --- FILA 3: Footer --- */
+.postcard-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.send-button {
+    background-color: #cccccc;
+    border: 1px solid #999;
+    font-family: 'Handlee', cursive;
+    padding: 5px 12px;
+    font-size: 16px;
+    color: #111;
+    cursor: pointer;
+}
